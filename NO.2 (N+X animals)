@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int N, X, i;
+
+    // Prompt user to input the number of domestic animals
+    printf("Enter the number of domestic animals: ");
+    scanf("%d", &N);
+
+    // Allocate memory for domestic animals
+    char domesticAnimals[N][50]; // Assume each name is up to 50 characters
+
+    // Input names of domestic animals
+    printf("Enter the names of the domestic animals:\n");
+    for (i = 0; i < N; i++) {
+        scanf("%s", domesticAnimals[i]);
+    }
+
+    // Prompt user to input the number of wild animals
+    printf("Enter the number of wild animals: ");
+    scanf("%d", &X);
+
+    // Allocate memory for wild animals
+    char wildAnimals[X][50]; // Assume each name is up to 50 characters
+
+    // Input names of wild animals
+    printf("Enter the names of the wild animals:\n");
+    for (i = 0; i < X; i++) {
+        scanf("%s", wildAnimals[i]);
+    }
+
+    // Print all animals
+    printf("\nAll animals:\n");
+    for (i = 0; i < N; i++) {
+        printf("%s\n", domesticAnimals[i]);
+    }
+    for (i = 0; i < X; i++) {
+        printf("%s\n", wildAnimals[i]);
+    }
+
+    return 0;
+}
